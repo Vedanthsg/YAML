@@ -1,0 +1,50 @@
+# Getting started with YAML
+
+student:
+  name: "Jarvis"
+  age: 21
+  height: 5.7
+  active_backlogs: false
+  dob: 2003-01-20
+  remarks: null
+  subjects:
+    - AI
+    - ML
+    - DS
+  programming_languages: ["python", "java", "javaScript"]
+
+  marvel:
+    - name: "Iron man"
+      color: "red"
+    - name: "Hulk"
+      color: "green"
+    
+  dc:
+    - {name: "superman", color: "blue"}
+    - {name: "batman", color: "black"}
+
+  short_desc: >
+    this is a how 
+    short des is written 
+    ignoring line spaces
+
+  long_desc: |
+    this is used to 
+      store all
+        the 
+    indentations and related things
+
+  &price 300 
+  # '&' is used to declare the variable
+
+  payment: *price
+  # '*' is used to access the variable
+
+  # Advanced
+  adv: &adv
+    mykey: myval
+
+  another_adv:
+    month: "Aug"
+    <<: *adv
+
